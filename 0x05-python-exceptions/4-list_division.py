@@ -6,13 +6,13 @@ def list_division(my_list_1, my_list_2, list_length):
             val1 = my_list_1[i]
             val2 = my_list_2[i]
             div = float(val1) / float(val2)
-        except ZeroDivisionError:
+        except (ZeroDivisionError):
             print("division by 0")
             div = 0
-        except TypeError:
+        except (TypeError):
             print("wrong type")
             div = 0
-        except IndexError:
+        except (IndexError):
             print("out of range")
             div = 0
         finally:
