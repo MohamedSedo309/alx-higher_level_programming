@@ -67,7 +67,10 @@ class Square:
         print # as square according to the side length
         """
         n = self.__size
-        for j in range(n):
-            for i in range(n):
-                print("#", end="")
+        if n == 0:
             print()
+        else:
+            for j in range(n):
+                for i in range(n):
+                    print("#", end="")
+                print()
