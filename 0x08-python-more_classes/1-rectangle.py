@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """
 Module 1-rectangle.py
 create a class represents rectangle
