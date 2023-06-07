@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module 5-rectangle.py
+Module 6-rectangle.py
 create a class represents rectangle
 with width and height.
 define width and height getters
