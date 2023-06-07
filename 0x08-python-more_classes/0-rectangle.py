@@ -5,5 +5,4 @@ create a class represents rectangle
 """
 class Rectangle:
     """create a class represents rectangle"""
-    def __init__(self):
-        pass
+    pass
