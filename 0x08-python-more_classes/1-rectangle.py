@@ -11,6 +11,7 @@ class Rectangle:
     Represent a rectangle
     has a width and height
     """
+    
     def __init__(self, width=0, height=0):
         """
         the init function
