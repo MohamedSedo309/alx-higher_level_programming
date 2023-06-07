@@ -12,6 +12,9 @@ class Rectangle:
     has a width and height
     """
     def __init__(self, width=0, height=0):
+        """
+        the init function
+        """
         self.width = width
         self.height = height
         
