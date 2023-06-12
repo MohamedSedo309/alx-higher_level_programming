@@ -1,0 +1,5 @@
+with open("1-my_list.txt", "r") as file:
+    contents = file.read().strip()
+    my_list = MyList([int(x) for x in contents.split(",")])
+
+my_list.print_sorted()
