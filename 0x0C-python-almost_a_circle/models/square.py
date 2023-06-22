@@ -14,7 +14,7 @@ class Square(Rectangle):
         my_square = "[Square] "
         my_id = "({}) ".format(self.id)
         my_xy = "{}/{} - ".format(self.x, self.y)
-        my_wh = "{}/{}".format(self.width, self.height)
+        my_wh = "{}".format(self.size)
 
         return my_square + my_id + my_xy + my_wh
         
