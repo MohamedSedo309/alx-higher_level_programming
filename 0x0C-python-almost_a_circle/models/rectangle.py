@@ -80,3 +80,12 @@ class Rectangle(Base):
         for i in range(self.height):
             rec += ("#" * self.width) + "\n"
         print(rec, end='')
+
+    def __str__(self):
+        """str method"""
+        my_rec = "[Rectangle] "
+        my_id = "({}) ".format(self.id)
+        my_xy = "{}/{} - ".format(self.x, self.y)
+        my_wh = "{}/{}".format(self.width, self.height)
+        
+        return my_rec + my_id + my_xy + my_wh
