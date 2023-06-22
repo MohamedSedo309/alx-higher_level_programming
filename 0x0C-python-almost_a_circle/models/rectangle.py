@@ -76,8 +76,9 @@ class Rectangle(Base):
 
     def display(self):
         """prints a number of # that represent rectangle"""
-        rec = ""
+        rec = self.y * "\n"
         for i in range(self.height):
+            rec += (" " * self.x)
             rec += ("#" * self.width) + "\n"
         print(rec, end='')
 
