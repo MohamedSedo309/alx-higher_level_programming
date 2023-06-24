@@ -47,3 +47,16 @@ class Square(Rectangle):
                     setattr(self, 'height', value)
                 else:
                     setattr(self, key, value)
+
+    def to_dictionary(self):
+        """ get json object from square """
+        att_list = ['id', 'size', 'x', 'y']
+        my_map = {}
+
+        for key in att_list:
+            if key == 'size':
+                my_map[key] = getattr(self, 'width')
+            else:
+                my_map[key] = getattr(self, key)
+
+        return my_map
