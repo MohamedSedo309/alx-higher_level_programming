@@ -100,3 +100,13 @@ class Rectangle(Base):
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        """ get json object from rectangle """
+        att_list = ['id', 'width', 'height', 'x', 'y']
+        my_map = {}
+
+        for key in att_list:
+            my_map[key] = getattr(self, key)
+
+        return my_map
