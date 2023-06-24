@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """  Test Base class Module """
-import unittest
-from models.base import Base
-from models.square import Square
-from models.rectangle import Rectangle
-from io import StringIO
 from unittest import TestCase
-from unittest.mock import patch
+import os
+
+from models.base import Base
+from models.rectangle import Rectangle
+from models.square import Square
+
 
 
 class TestBaseMethods(unittest.TestCase):
