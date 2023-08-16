@@ -13,14 +13,11 @@ module.exports = class Rectangle {
     }
   }
 
-  double () {
-      y = this.width;
-      this.width = this.height;
-      this.height = y;
-  }
-  
   rotate () {
-      this.width = this.width * 2;
-      this.height = this.height * 2;
+    [this.width, this.height] = [this.height, this.width];
+  }
+
+  double () {
+    [this.width, this.height] = [this.width * 2, this.height * 2];
   }
 };
