@@ -1,10 +1,7 @@
 #!/usr/bin/python3
-"""
-write a script that lists all states
-from the database hbtn_0e_0_usa:
-Usage: ./0-select_states.py <mysql username>
-                            <mysql password>
-                            <database name >
+"""Write a script that lists all states
+with a name starting with N (upper N) from
+the database hbtn_0e_0_usa
 """
 from sys import argv
 import MySQLdb
@@ -16,5 +13,8 @@ if __name__ == "__main__":
                          passwd=argv[2],
                          db=argv[3])
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM `states`")
-    [print(state) for state in cursor.fetchall()]
+    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%'ORDER BY id ASC ")
+    for row in cursor.fetchall():
+        print(row)
+    cursor.close()
+    db.close()
