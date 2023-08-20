@@ -13,6 +13,8 @@ if __name__ == "__main__":
                          passwd=argv[2],
                          db=argv[3], )
     cursor = db.cursor()
+    cursor.execute("SELECT COUNT(*) FROM states WHERE name = %s", (argv[4],))
+    count = cursor.fetchone()[0]
     cursor.execute("""SELECT * FROM states WHERE name = %s ORDER BY id ASC""",(argv[4],))
     for row in cursor.fetchall():
         print(row)
