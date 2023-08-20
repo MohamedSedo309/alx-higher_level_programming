@@ -17,6 +17,7 @@ if __name__ == "__main__":
     count = cursor.fetchone()[0]
     cursor.execute("""SELECT * FROM states WHERE name = %s ORDER BY id ASC""",(argv[4],))
     for row in cursor.fetchall():
-        print(row)
+        if row[1] == argv[4]:
+            print(row)
     cursor.close()
     db.close()
