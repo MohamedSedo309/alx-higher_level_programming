@@ -11,7 +11,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
     sql_command = "SELECT * FROM states WHERE name=%s ORDER BY id ASC"
     cursor.execute(sql_command, (argv[4],))
-    for row in cusror.fetchall():
+    for row in cursor.fetchall():
         print(row)
     cursor.close()
     db.close()
