@@ -10,7 +10,6 @@ if __name__ == "__main__":
     cursor = db.cursor()
     sql_command = """SELECT cities.name FROM states INNER JOIN cities on states.id = cities.state_id WHERE states.name=%s ORDER BY cities.id ASC"""
     cursor.execute(sql_command, (argv[4],))
-    for row in cursor.fetchall():
-        print(row)
+    print(', '.join(["{:s}".format(row[0]) for row in cursor.fetchall()]))
     cursor.close()
     db.close()
