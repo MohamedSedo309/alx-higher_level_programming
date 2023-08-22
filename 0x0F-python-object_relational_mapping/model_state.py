@@ -14,5 +14,5 @@ class State(Base):
     acting as MySQL table "states"
     """
     __tablename__ = "states"
-    id = Column(Ineger, nullable=false, primary_key=true)
-    name = Column(String(128), nullable=false)
+    id = Column(Integer, nullable=False, primary_key=True)
+    name = Column(String(128), nullable=False)
