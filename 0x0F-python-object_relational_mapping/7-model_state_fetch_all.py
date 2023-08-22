@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 get state objects from database via python from
-11;rgb:0000/0000/0000mysql states table
+mysql states table
 parameters: username, password, database
 """
 from sys import argv
