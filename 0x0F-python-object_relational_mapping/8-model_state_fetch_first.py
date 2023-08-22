@@ -19,7 +19,7 @@ if __name__ == "__main__":
     session = Session()
     first = session.query(State).order_by(State.id).first()
     if first:
-        print("{:d}: {:s}".format(i.id, i.name))
+        print("{:d}: {:s}".format(first.id, first.name))
     else:
         print("Nothing")
     session.close()
