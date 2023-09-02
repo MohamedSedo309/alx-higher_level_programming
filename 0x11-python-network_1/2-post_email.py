@@ -7,6 +7,7 @@ sending post request to url , with email data
 
 from sys import argv
 import urllib.request
+import urllib.parse
 
 if __name__ == "__main__":
     url = argv[1]
