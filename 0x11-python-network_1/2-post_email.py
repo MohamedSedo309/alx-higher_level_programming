@@ -12,8 +12,8 @@ import urllib.parse
 if __name__ == "__main__":
     url = argv[1]
     values = {'email' : argv[2]}
-    json = urllib.parse.urlencode(values)
-    json = json.encode('ascii')
-    request = urllib.request.Request(url, json)
+    d = urllib.parse.urlencode(values)
+    d = d.encode('ascii')
+    request = urllib.request.Request(url, d)
     with urllib.request.urlopen(request) as response:
         print(respone.read().decode('utf-8'))
