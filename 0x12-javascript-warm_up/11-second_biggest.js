@@ -4,5 +4,5 @@ if (args.length <= 1) {
   console.log(0);
 } else {
   const list = args.sort();
-  console.log(list.reverse()(1));
+  console.log(list.reverse()[1]);
 }
