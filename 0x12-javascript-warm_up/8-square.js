@@ -1,5 +1,6 @@
 #!/usr/bin/node
-const s = process.argv[3];
+const x = process.argv[3];
+const s = parseInt(x);
 if (isNaN(s)) {
     console.log('Missing size');
 } else {
