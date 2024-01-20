@@ -3,6 +3,7 @@
 linking a python class to a database table
 first - define a class
 """
+
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
