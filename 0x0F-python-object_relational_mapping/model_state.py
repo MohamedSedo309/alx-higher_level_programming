@@ -1,11 +1,25 @@
+#!/usr/bin/python3
+"""
+defines a State class and
+a Base class to
+work with MySQLAlchemy using ORM.
+"""
+
 from sqlalchemy import Column, Integer, String
-from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
+
 class State(Base):
-    __tablename__ = "states"
-    
-    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False, unique=True)
+    """State class
+
+    Attributes:
+        __tablename__ (str): The table name of the class
+        id (int): The State id of the class
+        name (str): The State name of the class
+    """
+    __tablename__ = 'states'
+
+    id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
