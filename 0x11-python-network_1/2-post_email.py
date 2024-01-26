@@ -11,7 +11,11 @@ import urllib.parse
 
 if __name__ == "__main__":
     url = argv[1]
+<<<<<<< HEAD
     values = {'email': argv[2]}
+=======
+    value = {'email' : argv[2]}
+>>>>>>> 91705af0d4d1212501a46c43b574a5c0735144c7
     data = urllib.parse.urlencode(value).encode("ascii")
     request = urllib.request.Request(url, data)
     with urllib.request.urlopen(request) as response:
